@@ -1,0 +1,670 @@
+
+/* =========================
+   Common CSS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FFF8F3;
+    --secondary-color: #FD6E0A;
+    --dark-color: #181818;
+    --text-color: #757575;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 1140px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   Header Section
+========================= */
+
+.header {
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #474747;
+    font-size: 14px;
+}
+
+.nav-menu .hire-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 430px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-info {
+    width: 50%;
+}
+
+.hero-info h4 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.hero-info h1 {
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-info p {
+    font-size: 13px;
+    color: var(--text-color);
+    line-height: 1.8;
+    max-width: 450px;
+    margin-bottom: 22px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.download-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.contact-btn {
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.developer-text {
+    position: absolute;
+    left: -250px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 100px;
+    font-weight: 1000;
+    letter-spacing: 12px;
+    color: #E4DCD7;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.hero-person {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 518px;
+    background-image: url(images/logo-3.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+.hero-person img{
+    position: absolute;
+    bottom: 0;
+    left: 63%;
+    transform: translateX(-50%);
+    width: auto;
+}
+.hero-image::before {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: #FFE1CE;
+    bottom: -290px;
+    right: -130px;
+    z-index: -1;
+    box-shadow:
+        0 0 0 25px rgba(253, 110, 10, 0.10),
+        0 0 0 50px rgba(253, 110, 10, 0.08);
+} 
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+} 
+
+
+/* =========================
+   About Section
+========================= */
+
+.about-section {
+    padding: 100px 0 70px;
+}
+
+.about-box {
+    background-color: var(--primary-color);
+    padding: 65px 70px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.about-box h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.about-description {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.about-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.info-item span {
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+.info-item h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   Skills Section
+========================= */
+
+.skills-section {
+    padding: 30px 0 80px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.section-heading p {
+    color: var(--text-color);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #FFFFFF;
+    padding: 25px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+}
+
+.skill-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.js-icon {
+    background-color: #F7DF1E;
+    color: #222;
+    font-size: 15px;
+}
+
+.react-icon {
+    color: #61DAFB;
+}
+
+.node-icon {
+    color: #83CD29;
+}
+
+.mongo-icon {
+    background-color: #001E2B;
+    color: #00ED64;
+}
+
+.skill-card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: var(--text-color);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-info {
+        width: 100%;
+    }
+
+    .hero-info h1 {
+        font-size: 40px;
+    }
+
+    .hero-info p {
+        margin: 15px auto 20px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 350px;
+        margin-top: 30px;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+
+    .developer-text {
+        display: none;
+    }
+
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-box {
+        padding: 40px 25px;
+    }
+
+    .about-info {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .info-item {
+        width: 45%;
+        margin-bottom: 15px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .nav-menu .hire-btn {
+        padding: 9px 12px;
+    }
+
+    .hero-info h1 {
+        font-size: 35px;
+    }
+
+    .hero-info h4 {
+        font-size: 23px;
+    }
+
+    .about-box {
+        padding: 35px 15px;
+    }
+
+    .about-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        width: 100%;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   Resume Section
+========================= */
+
+.resume-section {
+    padding: 80px 0 100px;
+    background-color: #FFFFFF;
+}
+
+.resume-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.resume-heading h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.resume-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.resume-column {
+    width: 50%;
+}
+
+.resume-column h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #474747;
+    margin-bottom: 25px;
+}
+
+.resume-item {
+    border-bottom: 1px solid #D1D1D1;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.resume-item:last-child {
+    border-bottom: none;
+}
+
+.resume-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #474747;
+    margin-bottom: 10px;
+}
+
+.resume-item h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #757575;
+    margin-bottom: 15px;
+}
+
+.resume-item p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.resume-button {
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   Contact Section
+========================= */
+
+.contact-section {
+    background-color: var(--primary-color);
+    padding: 90px 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.contact-info,
+.contact-form {
+    width: 50%;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #474747;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-links a {
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--dark-color);
+}
+
+
+/* Contact Form */
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 18px 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    color: var(--dark-color);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 1px solid var(--secondary-color);
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+    .resume-section {
+        padding: 60px 0;
+    }
+
+    .resume-heading {
+        margin-bottom: 40px;
+    }
+
+    .resume-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .resume-column {
+        width: 100%;
+    }
+
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .resume-heading h2 {
+        font-size: 22px;
+    }
+
+    .resume-column h3 {
+        font-size: 20px;
+    }
+
+    .contact-info h2,
+    .contact-form h2 {
+        font-size: 23px;
+    }
+
+}
+
+
